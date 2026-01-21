@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/card_gradient"
+    android:orientation="horizontal"
+    android:padding="@dimen/spacing_md"
+    android:layout_marginBottom="@dimen/spacing_sm"
+    android:gravity="center_vertical">
+
+    <!-- Group Avatar -->
+    <FrameLayout
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/header_gradient">
+        <ImageView
+            android:id="@+id/iv_group_icon"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_group_dark"
+            android:contentDescription="Group" />
+    </FrameLayout>
+
+    <!-- Group Info -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/spacing_md">
+
+        <TextView
+            android:id="@+id/tv_group_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_on_dark"
+            android:textSize="@dimen/text_body"
+            android:textStyle="bold"
+            tools:text="Trip to Paris" />
+
+        <TextView
+            android:id="@+id/tv_group_members"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_muted"
+            android:textSize="@dimen/text_caption"
+            android:layout_marginTop="2dp"
+            tools:text="4 members" />
+    </LinearLayout>
+
+    <!-- Currency/Amount -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="end">
+
+        <TextView
+            android:id="@+id/tv_group_currency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/accent_lime"
+            android:textSize="@dimen/text_body"
+            android:textStyle="bold"
+            tools:text="USD" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_muted"
+            android:textSize="@dimen/text_caption"
+            android:text="›"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base Colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- Premium Bottle Green Theme -->
+    <color name="bg_dark">#000000</color> <!-- Keep solid black for premium contrast -->
+    <color name="bg_card_dark">#00251A</color> <!-- Deepest Bottle Green -->
+    <color name="bg_card_darker">#001C15</color> <!-- Even darker -->
+    
+    <!-- Bottle Green & Shades -->
+    <color name="primary">#00695C</color> <!-- Bottle Green -->
+    <color name="primary_light">#4DB6AC</color> <!-- Lighter Teal/Green -->
+    <color name="primary_dark">#004D40</color> <!-- Rich Dark Green -->
+    
+    <color name="accent_cyan">#26A69A</color> <!-- Soft Teal Accent -->
+    <color name="accent_cyan_light">#80CBC4</color>
+    
+    <!-- Text Colors -->
+    <color name="text_on_dark">#E0F2F1</color> <!-- Very pale mint white -->
+    <color name="text_on_accent">#FFFFFF</color>
+    <color name="text_muted">#80CBC4</color> <!-- Muted Teal -->
+    <color name="text_muted_dark">#4DB6AC</color>
+    
+    <!-- Semantic Colors -->
+    <color name="positive">#66BB6A</color> <!-- Soft Green -->
+    <color name="negative">#EF5350</color> <!-- Soft Red -->
+    
+    <!-- Compatibility/Legacy mappings -->
+    <color name="accent_lime">#26A69A</color> 
+    <color name="accent_lime_dark">#004D40</color>
+    <color name="text_on_lime">#FFFFFF</color>
+    <color name="color_accent">#00695C</color>
+</resources>

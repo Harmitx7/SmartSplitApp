@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_dark">
+
+    <!-- Header with Balance Card -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/header_gradient"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_lg"
+        android:layout_margin="@dimen/spacing_md">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_group_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/text_on_lime"
+                android:textSize="@dimen/text_title"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/btn_export_pdf"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@android:drawable/ic_menu_save"
+                android:padding="4dp"
+                android:layout_marginEnd="8dp"
+                app:tint="@color/text_on_lime"
+                android:contentDescription="Export PDF" />
+
+            <ImageView
+                android:id="@+id/btn_stats"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_chart"
+                android:padding="4dp"
+                android:layout_marginEnd="8dp"
+                app:tint="@color/text_on_lime"
+                android:contentDescription="Stats" />
+
+            <ImageView
+                android:id="@+id/btn_share"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@android:drawable/ic_menu_share"
+                android:padding="4dp"
+                app:tint="@color/text_on_lime"
+                android:contentDescription="Share" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Group Balance"
+            android:textColor="@color/text_on_lime"
+            android:alpha="0.7"
+            android:textSize="@dimen/text_caption"
+            android:layout_marginTop="@dimen/spacing_md" />
+
+        <TextView
+            android:id="@+id/tv_total_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₹0.00"
+            android:textColor="@color/text_on_lime"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Tab Layout -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_dark"
+        app:tabTextColor="@color/text_muted"
+        app:tabSelectedTextColor="@color/accent_lime"
+        app:tabIndicatorColor="@color/accent_lime"
+        app:tabMode="fixed"
+        app:tabGravity="fill" />
+
+    <!-- ViewPager -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/bg_dark" />
+
+</LinearLayout>

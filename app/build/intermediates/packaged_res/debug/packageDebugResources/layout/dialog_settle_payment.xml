@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@color/bg_card_dark">
+
+    <TextView
+        android:id="@+id/tv_settle_summary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Paying Alice"
+        android:textColor="@color/text_on_dark"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <RadioGroup
+        android:id="@+id/rg_payment_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="12dp">
+
+        <RadioButton
+            android:id="@+id/rb_full"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Full Payment"
+            android:textColor="@color/text_on_dark"
+            android:buttonTint="@color/accent_lime"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/rb_partial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Partial Payment"
+            android:textColor="@color/text_on_dark"
+            android:buttonTint="@color/accent_lime" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/et_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Amount"
+        android:inputType="numberDecimal"
+        android:textColor="@color/text_on_dark"
+        android:textColorHint="@color/text_muted"
+        android:background="@drawable/input_background_dark"
+        android:padding="12dp"
+        android:visibility="gone" />
+
+</LinearLayout>

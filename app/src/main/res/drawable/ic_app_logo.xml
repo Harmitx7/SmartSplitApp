@@ -1,0 +1,26 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    
+    <!-- Background Circle for App Context (Optional, usually handled by adaptive icons) -->
+    <!-- We keep it transparent here as adaptive icon background is separate, 
+         but for the standalone logo usage we might want it. 
+         Standard launcher foreground shouldn't have full background usually.
+         Here we design just the "S" logo mark. -->
+         
+    <!-- Upper 'S' Curve (Mint) -->
+    <path
+        android:fillColor="#E0F2F1"
+        android:pathData="M54,34 C65,34 74,38 78,44 L72,50 C68,45 61,42 54,42 C45,42 42,46 42,50 C42,55 46,58 54,60 L60,62 C72,65 78,72 78,80 C78,92 68,98 54,98 C42,98 32,93 28,86 L34,80 C38,85 45,90 54,90 C64,90 68,86 68,80 C68,76 64,73 56,71 L50,69 C38,66 30,59 30,50 C30,38 40,34 54,34 Z"/>
+
+    <!-- Split Accent Line (Teal) -->
+    <path
+        android:fillColor="#26A69A"
+        android:pathData="M30,50 L78,50 L78,52 L30,52 Z" 
+        android:rotation="45"
+        android:pivotX="54"
+        android:pivotY="66"/>
+        
+</vector>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Smart Split</string>
+    <string name="action_create_group">Create Group</string>
+    <string name="action_join_group">Join Group</string>
+    <string name="title_groups">Your Groups</string>
+    <string name="hint_group_name">Group Name</string>
+    <string name="hint_display_name">Your Name</string>
+    <string name="btn_create">Create</string>
+    <string name="btn_save">Save</string>
+    <string name="btn_cancel">Cancel</string>
+</resources>

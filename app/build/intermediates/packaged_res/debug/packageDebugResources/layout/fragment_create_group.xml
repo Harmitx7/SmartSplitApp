@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_lg">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="@dimen/spacing_xl">
+            
+            <ImageView
+                android:id="@+id/btn_back"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_arrow_back"
+                android:padding="4dp" 
+                app:tint="@color/text_on_dark"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create New Group"
+                android:textColor="@color/text_on_dark"
+                android:textSize="@dimen/text_title"
+                android:textStyle="bold" 
+                android:layout_marginStart="@dimen/spacing_md"/>
+        </LinearLayout>
+
+        <!-- Group Name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Group Name"
+            android:textColor="@color/text_muted"
+            android:textSize="@dimen/text_caption"
+            android:layout_marginBottom="@dimen/spacing_xs" />
+
+        <EditText
+            android:id="@+id/et_group_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_dark_background"
+            android:padding="@dimen/spacing_md"
+            android:textColor="@color/text_on_dark"
+            android:textColorHint="@color/text_muted"
+            android:hint="e.g. Trip to Paris"
+            android:inputType="text"
+            android:layout_marginBottom="@dimen/spacing_md" />
+
+        <!-- Your Name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Display Name"
+            android:textColor="@color/text_muted"
+            android:textSize="@dimen/text_caption"
+            android:layout_marginBottom="@dimen/spacing_xs" />
+
+        <EditText
+            android:id="@+id/et_creator_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_dark_background"
+            android:padding="@dimen/spacing_md"
+            android:textColor="@color/text_on_dark"
+            android:textColorHint="@color/text_muted"
+            android:hint="e.g. John"
+            android:inputType="textPersonName"
+            android:layout_marginBottom="@dimen/spacing_md" />
+
+        <!-- Currency -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Currency"
+            android:textColor="@color/text_muted"
+            android:textSize="@dimen/text_caption"
+            android:layout_marginBottom="@dimen/spacing_xs" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_md"
+            android:textColorHint="@color/text_muted"
+            app:boxStrokeColor="@color/accent_lime"
+            app:hintTextColor="@color/accent_lime"
+            app:boxBackgroundColor="@color/bg_card_dark">
+
+            <AutoCompleteTextView
+                android:id="@+id/et_currency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:text="INR"
+                android:textColor="@color/text_on_dark"
+                android:padding="@dimen/spacing_md"
+                android:background="@null" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Description -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Description (Optional)"
+            android:textColor="@color/text_muted"
+            android:textSize="@dimen/text_caption"
+            android:layout_marginBottom="@dimen/spacing_xs" />
+
+        <EditText
+            android:id="@+id/et_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_dark_background"
+            android:padding="@dimen/spacing_md"
+            android:textColor="@color/text_on_dark"
+            android:textColorHint="@color/text_muted"
+            android:hint="Add a description..."
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:gravity="top"
+            android:layout_marginBottom="@dimen/spacing_xl" />
+
+        <!-- Create Button -->
+        <Button
+            android:id="@+id/btn_create_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_lime"
+            android:text="Create Group"
+            android:textColor="@color/text_on_lime"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:padding="@dimen/spacing_md" />
+
+    </LinearLayout>
+</ScrollView>

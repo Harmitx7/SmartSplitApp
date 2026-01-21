@@ -1,0 +1,7 @@
+com.example.smartsplitter.test.app-jetified-core-1.5.0-0 /Users/jenilrevaliya/.gradle/caches/9.0-milestone-1/transforms/c6c8896eff7c9c6da2611eaef28e3833/transformed/jetified-core-1.5.0/res
+com.example.smartsplitter.test.app-jetified-annotation-experimental-1.3.0-1 /Users/jenilrevaliya/.gradle/caches/9.0-milestone-1/transforms/de2ac08c2bd0089c5b15270cfad29504/transformed/jetified-annotation-experimental-1.3.0/res
+com.example.smartsplitter.test.app-androidTest-2 /Users/jenilrevaliya/Downloads/SmartSplitApp-main/app/build/generated/res/resValues/androidTest/debug
+com.example.smartsplitter.test.app-updated_navigation_xml-3 /Users/jenilrevaliya/Downloads/SmartSplitApp-main/app/build/generated/updated_navigation_xml/debugAndroidTest
+com.example.smartsplitter.test.app-mergeDebugAndroidTestResources-4 /Users/jenilrevaliya/Downloads/SmartSplitApp-main/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/merged.dir
+com.example.smartsplitter.test.app-mergeDebugAndroidTestResources-5 /Users/jenilrevaliya/Downloads/SmartSplitApp-main/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/stripped.dir
+com.example.smartsplitter.test.app-debugAndroidTest-6 /Users/jenilrevaliya/Downloads/SmartSplitApp-main/app/build/intermediates/merged_res/debugAndroidTest/mergeDebugAndroidTestResources

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_dark"
+    android:padding="@dimen/spacing_lg">
+
+    <!-- Header -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Join Group"
+        android:textColor="@color/text_on_dark"
+        android:textSize="@dimen/text_title"
+        android:textStyle="bold"
+        android:layout_marginBottom="@dimen/spacing_lg" />
+
+    <!-- Instructions Card -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_lime_background"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_lg"
+        android:layout_marginBottom="@dimen/spacing_xl">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📷"
+            android:textSize="32sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Scan QR Code"
+            android:textColor="@color/text_on_lime"
+            android:textSize="@dimen/text_body"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/spacing_sm" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ask a group member to show you their QR code"
+            android:textColor="@color/text_on_lime"
+            android:alpha="0.8"
+            android:textSize="@dimen/text_caption"
+            android:layout_marginTop="@dimen/spacing_xs" />
+    </LinearLayout>
+
+    <!-- Your Name -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Display Name"
+        android:textColor="@color/text_muted"
+        android:textSize="@dimen/text_caption"
+        android:layout_marginBottom="@dimen/spacing_xs" />
+
+    <EditText
+        android:id="@+id/et_display_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_dark_background"
+        android:padding="@dimen/spacing_md"
+        android:textColor="@color/text_on_dark"
+        android:textColorHint="@color/text_muted"
+        android:hint="Your name in this group"
+        android:inputType="textPersonName"
+        android:layout_marginBottom="@dimen/spacing_xl" />
+
+    <!-- Scan Button -->
+    <Button
+        android:id="@+id/btn_scan_qr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_lime"
+        android:text="📷  Scan QR Code"
+        android:textColor="@color/text_on_lime"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:padding="@dimen/spacing_md" />
+
+    <!-- Scanned Group Info (hidden initially) -->
+    <LinearLayout
+        android:id="@+id/layout_group_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_dark_background"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_md"
+        android:layout_marginTop="@dimen/spacing_lg"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Group Found"
+            android:textColor="@color/accent_lime"
+            android:textSize="@dimen/text_caption" />
+
+        <TextView
+            android:id="@+id/tv_scanned_group_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_on_dark"
+            android:textSize="@dimen/text_body"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/spacing_xs" />
+    </LinearLayout>
+
+    <!-- Join Button (hidden initially) -->
+    <Button
+        android:id="@+id/btn_join_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_lime"
+        android:text="Join Group"
+        android:textColor="@color/text_on_lime"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:padding="@dimen/spacing_md"
+        android:layout_marginTop="@dimen/spacing_md"
+        android:visibility="gone" />
+
+</LinearLayout>

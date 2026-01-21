@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="accent_cyan">#26A69A</color>
+    <color name="accent_cyan_light">#80CBC4</color>
+    <color name="accent_lime">#26A69A</color>
+    <color name="accent_lime_dark">#004D40</color>
+    <color name="bg_card_dark">#00251A</color>
+    <color name="bg_card_darker">#001C15</color>
+    <color name="bg_dark">#000000</color>
+    <color name="black">#FF000000</color>
+    <color name="color_accent">#00695C</color>
+    <color name="negative">#EF5350</color>
+    <color name="positive">#66BB6A</color>
+    <color name="primary">#00695C</color>
+    <color name="primary_dark">#004D40</color>
+    <color name="primary_light">#4DB6AC</color>
+    <color name="text_muted">#80CBC4</color>
+    <color name="text_muted_dark">#4DB6AC</color>
+    <color name="text_on_accent">#FFFFFF</color>
+    <color name="text_on_dark">#E0F2F1</color>
+    <color name="text_on_lime">#FFFFFF</color>
+    <color name="white">#FFFFFFFF</color>
+    <dimen name="card_elevation">4dp</dimen>
+    <dimen name="corner_lg">24dp</dimen>
+    <dimen name="corner_md">16dp</dimen>
+    <dimen name="corner_sm">8dp</dimen>
+    <dimen name="corner_xl">32dp</dimen>
+    <dimen name="icon_lg">32dp</dimen>
+    <dimen name="icon_md">24dp</dimen>
+    <dimen name="icon_sm">20dp</dimen>
+    <dimen name="icon_xl">48dp</dimen>
+    <dimen name="spacing_lg">24dp</dimen>
+    <dimen name="spacing_md">16dp</dimen>
+    <dimen name="spacing_sm">8dp</dimen>
+    <dimen name="spacing_xl">32dp</dimen>
+    <dimen name="spacing_xs">4dp</dimen>
+    <dimen name="text_body">16sp</dimen>
+    <dimen name="text_caption">12sp</dimen>
+    <dimen name="text_headline">28sp</dimen>
+    <dimen name="text_title">20sp</dimen>
+    <string name="action_create_group">Create Group</string>
+    <string name="action_join_group">Join Group</string>
+    <string name="app_name">Smart Expense Splitter</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_create">Create</string>
+    <string name="btn_save">Save</string>
+    <string name="hint_display_name">Your Name</string>
+    <string name="hint_group_name">Group Name</string>
+    <string name="title_groups">Your Groups</string>
+    <style name="Theme.SmartSplitter" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        
+        <item name="colorSecondary">@color/accent_cyan</item>
+        <item name="colorSecondaryVariant">@color/accent_cyan_light</item>
+        <item name="colorOnSecondary">@color/white</item>
+        
+        <item name="android:colorBackground">@color/bg_dark</item>
+        <item name="colorSurface">@color/bg_card_dark</item>
+        <item name="colorOnSurface">@color/text_on_dark</item>
+        
+        <item name="android:statusBarColor">@color/bg_dark</item>
+        <item name="android:navigationBarColor">@color/bg_dark</item>
+        
+        <item name="android:textColorPrimary">@color/text_on_dark</item>
+        <item name="android:textColorSecondary">@color/text_muted</item>
+    </style>
+</resources>

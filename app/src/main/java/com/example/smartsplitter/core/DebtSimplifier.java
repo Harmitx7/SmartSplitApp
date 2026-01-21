@@ -3,6 +3,7 @@ package com.example.smartsplitter.core;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -15,7 +16,8 @@ public class DebtSimplifier {
         public String toMemberName;
         public double amount;
 
-        public Settlement(String fromMemberId, String fromMemberName, String toMemberId, String toMemberName, double amount) {
+        public Settlement(String fromMemberId, String fromMemberName, String toMemberId, String toMemberName,
+                double amount) {
             this.fromMemberId = fromMemberId;
             this.fromMemberName = fromMemberName;
             this.toMemberId = toMemberId;
@@ -26,22 +28,27 @@ public class DebtSimplifier {
 
     public List<Settlement> simplifyDebts(Map<String, BalanceCalculator.MemberBalance> balances) {
         List<Settlement> settlements = new ArrayList<>();
-
         List<BalanceCalculator.MemberBalance> creditors = new ArrayList<>();
         List<BalanceCalculator.MemberBalance> debtors = new ArrayList<>();
 
+        // Use a map to track remaining balances for simplification algorithm
+        // without mutating the original MemberBalance objects
+        Map<String, Double> remainingBalances = new HashMap<>();
+
         for (BalanceCalculator.MemberBalance b : balances.values()) {
-            if (b.netBalance > 0.01) { // Floating point tolerance
+            if (b.netBalance > 0.01) {
                 creditors.add(b);
+                remainingBalances.put(b.memberId, b.netBalance);
             } else if (b.netBalance < -0.01) {
                 debtors.add(b);
+                remainingBalances.put(b.memberId, b.netBalance);
             }
         }
 
-        // Sort descending
+        // Sort creditors descending (highest balance first)
         Collections.sort(creditors, (a, b) -> Double.compare(b.netBalance, a.netBalance));
-        // Sort ascending (most negative first)
-        Collections.sort(debtors, (a, b) -> Double.compare(a.netBalance, b.netBalance)); // -100 vs -10, -100 is smaller
+        // Sort debtors ascending (most negative balance first)
+        Collections.sort(debtors, (a, b) -> Double.compare(a.netBalance, b.netBalance));
 
         int i = 0; // creditor index
         int j = 0; // debtor index
@@ -50,33 +57,29 @@ public class DebtSimplifier {
             BalanceCalculator.MemberBalance creditor = creditors.get(i);
             BalanceCalculator.MemberBalance debtor = debtors.get(j);
 
-            // The debtor owes X (negative), creditor is owed Y (positive)
-            // Amount to transfer is min(|debtor|, creditor)
-            double debtorAmount = Math.abs(debtor.netBalance);
-            double creditorAmount = creditor.netBalance;
-            
-            double amount = Math.min(debtorAmount, creditorAmount);
-            amount = Math.round(amount * 100.0) / 100.0; // Round to 2 decimals
+            double creditorRemaining = remainingBalances.get(creditor.memberId);
+            double debtorRemaining = Math.abs(remainingBalances.get(debtor.memberId));
+
+            double amount = Math.min(debtorRemaining, creditorRemaining);
+            amount = Math.round(amount * 100.0) / 100.0;
 
             if (amount > 0) {
                 settlements.add(new Settlement(
-                    debtor.memberId,
-                    debtor.displayName,
-                    creditor.memberId,
-                    creditor.displayName,
-                    amount
-                ));
+                        debtor.memberId,
+                        debtor.displayName,
+                        creditor.memberId,
+                        creditor.displayName,
+                        amount));
             }
 
-            // Update balances locally for the algorithm
-            creditor.netBalance -= amount;
-            debtor.netBalance += amount; // adding positive amount to negative balance reduces debt
+            // Update local state for algorithm
+            remainingBalances.put(creditor.memberId, creditorRemaining - amount);
+            remainingBalances.put(debtor.memberId, -(debtorRemaining - amount));
 
-            if (creditor.netBalance < 0.01) {
+            if (remainingBalances.get(creditor.memberId) < 0.01) {
                 i++;
             }
-            // Check absolute value because adding a positive amount to negative might make it ~0
-            if (Math.abs(debtor.netBalance) < 0.01) {
+            if (Math.abs(remainingBalances.get(debtor.memberId)) < 0.01) {
                 j++;
             }
         }

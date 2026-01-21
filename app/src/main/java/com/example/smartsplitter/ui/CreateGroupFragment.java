@@ -72,29 +72,10 @@ public class CreateGroupFragment extends Fragment {
                 return;
             }
 
-            // Get username for member creation. If session has no username, rely on name
-            String currentUsername = sessionManager.getUserName(); // SessionManager currently only has getName/Email?
-            // Wait, SessionManager has createLoginSession(email, name).
-            // We need to verify if username is available. The user says "username - jenil".
-            // Since SessionManager doesn't store username key explicitly (checked Step
-            // 1431),
-            // we'll assume name is primary or we use email/name.
-            // But wait, user requested "Me" logic.
-            // In DummyDataUtil we used 'me.username'.
-            // Ideally SessionManager should store username.
-            // For now, let's pass null for username if not available, OR assume name is
-            // enough if unique.
-            // BUT I added logic to GroupViewModel to use username.
-            // I'll try to use email as unique id/username if real username is missing?
-            // Actually, SessionManager.getUserName() returns the display name.
-            // I'll update SessionManager later if needed. For now pass null or name.
+            // Always use the latest session data for the username link
+            String currentUsername = sessionManager.getUsername();
 
-            // Wait, I can't easily update Session without breaking other things right now.
-            // I will pass null for username unless I'm sure.
-            // Actually, if creator name matches my display name, "Me" logic depends on
-            // that.
-
-            viewModel.createGroup(name, currency, desc, creator, null);
+            viewModel.createGroup(name, currency, desc, creator, currentUsername);
             android.widget.Toast.makeText(getContext(), "Group Created Successfully", android.widget.Toast.LENGTH_SHORT)
                     .show();
             getParentFragmentManager().popBackStack();

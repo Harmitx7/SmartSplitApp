@@ -296,6 +296,116 @@ public final class GroupDao_Impl implements GroupDao {
   }
 
   @Override
+  public LiveData<List<GroupWithMembers>> getAllActiveGroupsWithMembers() {
+    final String _sql = "SELECT * FROM groups WHERE is_archived = 0 ORDER BY updated_at DESC";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
+    return __db.getInvalidationTracker().createLiveData(new String[] {"members",
+        "groups"}, true, new Callable<List<GroupWithMembers>>() {
+      @Override
+      @Nullable
+      public List<GroupWithMembers> call() throws Exception {
+        __db.beginTransaction();
+        try {
+          final Cursor _cursor = DBUtil.query(__db, _statement, true, null);
+          try {
+            final int _cursorIndexOfGroupId = CursorUtil.getColumnIndexOrThrow(_cursor, "group_id");
+            final int _cursorIndexOfGroupName = CursorUtil.getColumnIndexOrThrow(_cursor, "group_name");
+            final int _cursorIndexOfCurrency = CursorUtil.getColumnIndexOrThrow(_cursor, "currency");
+            final int _cursorIndexOfDescription = CursorUtil.getColumnIndexOrThrow(_cursor, "description");
+            final int _cursorIndexOfCreatedAt = CursorUtil.getColumnIndexOrThrow(_cursor, "created_at");
+            final int _cursorIndexOfUpdatedAt = CursorUtil.getColumnIndexOrThrow(_cursor, "updated_at");
+            final int _cursorIndexOfIsArchived = CursorUtil.getColumnIndexOrThrow(_cursor, "is_archived");
+            final int _cursorIndexOfQrCodeData = CursorUtil.getColumnIndexOrThrow(_cursor, "qr_code_data");
+            final ArrayMap<String, ArrayList<Member>> _collectionMembers = new ArrayMap<String, ArrayList<Member>>();
+            while (_cursor.moveToNext()) {
+              final String _tmpKey;
+              if (_cursor.isNull(_cursorIndexOfGroupId)) {
+                _tmpKey = null;
+              } else {
+                _tmpKey = _cursor.getString(_cursorIndexOfGroupId);
+              }
+              if (_tmpKey != null) {
+                if (!_collectionMembers.containsKey(_tmpKey)) {
+                  _collectionMembers.put(_tmpKey, new ArrayList<Member>());
+                }
+              }
+            }
+            _cursor.moveToPosition(-1);
+            __fetchRelationshipmembersAscomExampleSmartsplitterDataMember(_collectionMembers);
+            final List<GroupWithMembers> _result = new ArrayList<GroupWithMembers>(_cursor.getCount());
+            while (_cursor.moveToNext()) {
+              final GroupWithMembers _item;
+              final Group _tmpGroup;
+              if (!(_cursor.isNull(_cursorIndexOfGroupId) && _cursor.isNull(_cursorIndexOfGroupName) && _cursor.isNull(_cursorIndexOfCurrency) && _cursor.isNull(_cursorIndexOfDescription) && _cursor.isNull(_cursorIndexOfCreatedAt) && _cursor.isNull(_cursorIndexOfUpdatedAt) && _cursor.isNull(_cursorIndexOfIsArchived) && _cursor.isNull(_cursorIndexOfQrCodeData))) {
+                _tmpGroup = new Group();
+                if (_cursor.isNull(_cursorIndexOfGroupId)) {
+                  _tmpGroup.groupId = null;
+                } else {
+                  _tmpGroup.groupId = _cursor.getString(_cursorIndexOfGroupId);
+                }
+                if (_cursor.isNull(_cursorIndexOfGroupName)) {
+                  _tmpGroup.groupName = null;
+                } else {
+                  _tmpGroup.groupName = _cursor.getString(_cursorIndexOfGroupName);
+                }
+                if (_cursor.isNull(_cursorIndexOfCurrency)) {
+                  _tmpGroup.currency = null;
+                } else {
+                  _tmpGroup.currency = _cursor.getString(_cursorIndexOfCurrency);
+                }
+                if (_cursor.isNull(_cursorIndexOfDescription)) {
+                  _tmpGroup.description = null;
+                } else {
+                  _tmpGroup.description = _cursor.getString(_cursorIndexOfDescription);
+                }
+                _tmpGroup.createdAt = _cursor.getLong(_cursorIndexOfCreatedAt);
+                _tmpGroup.updatedAt = _cursor.getLong(_cursorIndexOfUpdatedAt);
+                final int _tmp;
+                _tmp = _cursor.getInt(_cursorIndexOfIsArchived);
+                _tmpGroup.isArchived = _tmp != 0;
+                if (_cursor.isNull(_cursorIndexOfQrCodeData)) {
+                  _tmpGroup.qrCodeData = null;
+                } else {
+                  _tmpGroup.qrCodeData = _cursor.getString(_cursorIndexOfQrCodeData);
+                }
+              } else {
+                _tmpGroup = null;
+              }
+              final ArrayList<Member> _tmpMembersCollection;
+              final String _tmpKey_1;
+              if (_cursor.isNull(_cursorIndexOfGroupId)) {
+                _tmpKey_1 = null;
+              } else {
+                _tmpKey_1 = _cursor.getString(_cursorIndexOfGroupId);
+              }
+              if (_tmpKey_1 != null) {
+                _tmpMembersCollection = _collectionMembers.get(_tmpKey_1);
+              } else {
+                _tmpMembersCollection = new ArrayList<Member>();
+              }
+              _item = new GroupWithMembers();
+              _item.group = _tmpGroup;
+              _item.members = _tmpMembersCollection;
+              _result.add(_item);
+            }
+            __db.setTransactionSuccessful();
+            return _result;
+          } finally {
+            _cursor.close();
+          }
+        } finally {
+          __db.endTransaction();
+        }
+      }
+
+      @Override
+      protected void finalize() {
+        _statement.release();
+      }
+    });
+  }
+
+  @Override
   public LiveData<GroupWithMembers> getGroupWithMembers(final String groupId) {
     final String _sql = "SELECT * FROM groups WHERE group_id = ?";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);

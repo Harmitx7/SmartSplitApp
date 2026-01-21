@@ -40,23 +40,18 @@ public class ExpenseListFragment extends Fragment {
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
-                             @Nullable Bundle savedInstanceState) {
+            @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_expense_list, container, false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        
+
         // Scope to Parent Fragment! Basic rule for shared VMs in ViewPager
         // Actually, GroupDetailFragment hosts the VP. So we want that VM.
         // If we use requireParentFragment(), we can get its VM.
-        if (getParentFragment() != null) {
-            viewModel = new ViewModelProvider(getParentFragment()).get(GroupDetailViewModel.class);
-        } else {
-             // Fallback
-            viewModel = new ViewModelProvider(requireActivity()).get(GroupDetailViewModel.class);
-        }
+        viewModel = new ViewModelProvider(requireActivity()).get(GroupDetailViewModel.class);
 
         RecyclerView recyclerView = view.findViewById(R.id.recycler_view_expenses);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
@@ -64,11 +59,18 @@ public class ExpenseListFragment extends Fragment {
         recyclerView.setAdapter(adapter);
 
         viewModel.expenses.observe(getViewLifecycleOwner(), list -> {
-            adapter.setExpenses(list);
+            java.util.Map<String, String> memberNames = new java.util.HashMap<>();
+            com.example.smartsplitter.data.GroupWithMembers groupData = viewModel.groupWithMembers.getValue();
+            if (groupData != null && groupData.members != null) {
+                for (com.example.smartsplitter.data.Member m : groupData.members) {
+                    memberNames.put(m.memberId, m.displayName);
+                }
+            }
+            adapter.setExpenses(list, memberNames);
         });
 
         view.findViewById(R.id.fab_add_expense).setOnClickListener(v -> {
-            ((MainActivity) getActivity()).showAddExpenseFragment();
+            ((MainActivity) getActivity()).showAddExpenseFragment(groupId);
         });
     }
 }

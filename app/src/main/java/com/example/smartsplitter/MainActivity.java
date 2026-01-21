@@ -144,12 +144,12 @@ public class MainActivity extends AppCompatActivity {
                                 .commit();
         }
 
-        public void showAddExpenseFragment() {
+        public void showAddExpenseFragment(String groupId) {
                 getSupportFragmentManager().beginTransaction()
                                 .setCustomAnimations(R.anim.slide_up_enter, R.anim.fade_out_simple,
                                                 R.anim.slide_up_enter,
                                                 R.anim.fade_out_simple)
-                                .replace(R.id.fragment_container, new AddExpenseFragment())
+                                .replace(R.id.fragment_container, AddExpenseFragment.newInstance(groupId))
                                 .addToBackStack(null)
                                 .commit();
         }

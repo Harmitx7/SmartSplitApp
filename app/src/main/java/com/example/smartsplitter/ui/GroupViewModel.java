@@ -16,15 +16,21 @@ public class GroupViewModel extends AndroidViewModel {
 
     private AppRepository repository;
     private LiveData<List<Group>> allGroups;
+    private LiveData<List<com.example.smartsplitter.data.GroupWithMembers>> allGroupsWithMembers;
 
     public GroupViewModel(@NonNull Application application) {
         super(application);
         repository = new AppRepository(application);
         allGroups = repository.getAllActiveGroups();
+        allGroupsWithMembers = repository.getAllActiveGroupsWithMembers();
     }
 
     public LiveData<List<Group>> getAllGroups() {
         return allGroups;
+    }
+
+    public LiveData<List<com.example.smartsplitter.data.GroupWithMembers>> getAllGroupsWithMembers() {
+        return allGroupsWithMembers;
     }
 
     public void createGroup(String name, String currency, String description, String creatorName,
@@ -37,7 +43,7 @@ public class GroupViewModel extends AndroidViewModel {
         repository.createGroupWithCreator(newGroup, creator);
     }
 
-    public void joinGroup(Group group, String memberName) {
+    public void joinGroup(Group group, String memberName, String username) {
         // Assume group object is parsed from QR/Manual entry
         // We need to check if group exists locally first?
         // For simplicity, we just insert. OnConflict REPLACES which might be bad if we
@@ -49,6 +55,9 @@ public class GroupViewModel extends AndroidViewModel {
 
         repository.insertGroup(group);
         Member newMember = new Member(group.groupId, memberName);
+        if (username != null && !username.isEmpty()) {
+            newMember.username = username;
+        }
         repository.insertMember(newMember);
     }
 }

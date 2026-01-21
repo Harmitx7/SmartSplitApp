@@ -82,7 +82,7 @@ public class SignupFragment extends Fragment {
             btnSignup.setEnabled(true);
             if (success) {
                 // Auto login after register
-                sessionManager.createLoginSession(email, name);
+                sessionManager.createLoginSession(email, name, username);
                 Intent intent = new Intent(getActivity(), MainActivity.class);
                 startActivity(intent);
                 requireActivity().finish();

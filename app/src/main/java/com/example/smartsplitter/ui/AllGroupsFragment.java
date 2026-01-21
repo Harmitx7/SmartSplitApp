@@ -19,7 +19,7 @@ public class AllGroupsFragment extends Fragment {
 
     private GroupViewModel viewModel;
     private GroupListAdapter adapter;
-    private java.util.List<com.example.smartsplitter.data.Group> fullGroupList = new java.util.ArrayList<>();
+    private java.util.List<com.example.smartsplitter.data.GroupWithMembers> fullGroupList = new java.util.ArrayList<>();
     private android.widget.EditText etSearch;
 
     @Override
@@ -47,8 +47,8 @@ public class AllGroupsFragment extends Fragment {
 
         viewModel = new ViewModelProvider(this).get(GroupViewModel.class);
 
-        // Observe all groups
-        viewModel.getAllGroups().observe(getViewLifecycleOwner(), groups -> {
+        // Observe all groups with members
+        viewModel.getAllGroupsWithMembers().observe(getViewLifecycleOwner(), groups -> {
             if (groups != null) {
                 fullGroupList = new java.util.ArrayList<>(groups);
                 // Apply current search if any
@@ -83,15 +83,16 @@ public class AllGroupsFragment extends Fragment {
         if (fullGroupList == null)
             return;
 
-        java.util.List<com.example.smartsplitter.data.Group> filtered = new java.util.ArrayList<>();
+        java.util.List<com.example.smartsplitter.data.GroupWithMembers> filtered = new java.util.ArrayList<>();
         if (query == null || query.trim().isEmpty()) {
             filtered.addAll(fullGroupList);
         } else {
             String q = query.toLowerCase().trim();
-            for (com.example.smartsplitter.data.Group g : fullGroupList) {
+            for (com.example.smartsplitter.data.GroupWithMembers data : fullGroupList) {
+                com.example.smartsplitter.data.Group g = data.group;
                 if (g.groupName.toLowerCase().contains(q)
                         || (g.description != null && g.description.toLowerCase().contains(q))) {
-                    filtered.add(g);
+                    filtered.add(data);
                 }
             }
 

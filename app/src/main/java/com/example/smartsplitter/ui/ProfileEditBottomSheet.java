@@ -140,7 +140,7 @@ public class ProfileEditBottomSheet extends BottomSheetDialogFragment {
                     db.userDao().updateUser(currentUser);
 
                     // Update Session
-                    session.createLoginSession(email, newName); // Updates name in pref
+                    session.createLoginSession(email, newName, currentUser.username); // Updates name in pref
 
                     requireActivity().runOnUiThread(() -> {
                         Toast.makeText(getContext(), "Profile Updated", Toast.LENGTH_SHORT).show();

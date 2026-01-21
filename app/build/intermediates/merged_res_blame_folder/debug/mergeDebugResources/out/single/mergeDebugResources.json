@@ -1,294 +1,286 @@
 [
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/drawable_header_gradient.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/drawable/header_gradient.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/drawable_ic_hotel.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/drawable/ic_hotel.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/drawable_ic_hotel.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/drawable/ic_hotel.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/layout_dialog_share_qr.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/layout/dialog_share_qr.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/layout_fragment_history.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/layout/fragment_history.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/drawable_card_dark_background.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/drawable/card_dark_background.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/xml_backup_rules.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/xml/backup_rules.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/drawable_header_gradient.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/drawable/header_gradient.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/drawable_ic_add.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/drawable/ic_add.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/drawable_ic_transport.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/drawable/ic_transport.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/layout_fragment_members.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/layout/fragment_members.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/drawable_ic_entertainment.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/drawable/ic_entertainment.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/anim_slide_up_enter.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/anim/slide_up_enter.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/drawable_ic_add.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/drawable/ic_add.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/drawable_ic_camera.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/drawable/ic_camera.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/anim_slide_out_left.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/anim/slide_out_left.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/drawable_ic_star.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/drawable/ic_star.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/layout_item_expense_card.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/layout/item_expense_card.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/layout_bottom_sheet_profile_edit.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/layout/bottom_sheet_profile_edit.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/drawable_ic_document.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/drawable/ic_document.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/layout_fragment_add_expense.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/layout/fragment_add_expense.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/drawable_ic_credit_card.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/drawable/ic_credit_card.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/drawable_ic_delete.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/drawable/ic_delete.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/drawable_bottom_sheet_background.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/drawable/bottom_sheet_background.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/xml_data_extraction_rules.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/xml/data_extraction_rules.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/anim_fade_out_simple.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/anim/fade_out_simple.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/drawable_ic_chart.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/drawable/ic_chart.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/drawable_ic_share.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/drawable/ic_share.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/drawable_ic_group_dark.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/drawable/ic_group_dark.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/drawable_input_background_dark.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/drawable/input_background_dark.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/layout_fragment_balances.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/layout/fragment_balances.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/anim_pop_exit.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/anim/pop_exit.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/drawable_ic_credit_card.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/drawable/ic_credit_card.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/drawable_ic_home.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/drawable/ic_home.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/anim_slide_in_right.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/anim/slide_in_right.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/drawable_ic_history.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/drawable/ic_history.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/drawable_card_lime_background.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/drawable/card_lime_background.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/anim_slide_in_right.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/anim/slide_in_right.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/drawable_ic_search.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/drawable/ic_search.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/drawable_ic_food.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/drawable/ic_food.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/layout_fragment_join_group.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/layout/fragment_join_group.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/drawable_ic_settings.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/drawable/ic_settings.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/drawable_card_gradient.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/drawable/card_gradient.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/layout_fragment_create_group.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/layout/fragment_create_group.xml"
+    },
+    {
+        "merged": "com.example.smartsplitter.app-debug-35:/layout_fragment_expense_list.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/layout/fragment_expense_list.xml"
     },
     {
         "merged": "com.example.smartsplitter.app-debug-35:/layout_fragment_members.xml.flat",
         "source": "com.example.smartsplitter.app-main-37:/layout/fragment_members.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/drawable_ic_lock.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/drawable/ic_lock.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/drawable_ic_chart.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/drawable/ic_chart.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/layout_fragment_login.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/layout/fragment_login.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/layout_fragment_add_expense.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/layout/fragment_add_expense.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/anim_fade_out_simple.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/anim/fade_out_simple.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/layout_activity_auth.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/layout/activity_auth.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/layout_item_settlement.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/layout/item_settlement.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/layout_fragment_all_groups.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/layout/fragment_all_groups.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/drawable_ic_launcher_foreground.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/drawable/ic_launcher_foreground.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/drawable_ic_search.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/drawable/ic_search.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/drawable_card_dark_background.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/drawable/card_dark_background.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/layout_fragment_group_detail.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/layout/fragment_group_detail.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/layout_fragment_group_list.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/layout/fragment_group_list.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/drawable_ic_arrow_back.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/drawable/ic_arrow_back.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/drawable_ic_transport.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/drawable/ic_transport.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/layout_dialog_settle_payment.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/layout/dialog_settle_payment.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/drawable_ic_history.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/drawable/ic_history.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/layout_fragment_history.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/layout/fragment_history.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/layout_fragment_settings.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/layout/fragment_settings.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/drawable_card_lime_background.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/drawable/card_lime_background.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/drawable_ic_app_logo.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/drawable/ic_app_logo.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/layout_fragment_balances.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/layout/fragment_balances.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/drawable_ic_money_dark.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/drawable/ic_money_dark.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/anim_pop_enter.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/anim/pop_enter.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/drawable_ic_share.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/drawable/ic_share.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/drawable_button_gradient.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/drawable/button_gradient.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/drawable_bottom_sheet_background.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/drawable/bottom_sheet_background.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/drawable_ic_delete.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/drawable/ic_delete.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/drawable_icon_background.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/drawable/icon_background.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/drawable/ic_launcher_foreground.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/layout_dialog_share_qr.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/layout/dialog_share_qr.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/layout_item_settlement.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/layout/item_settlement.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/anim_pop_enter.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/anim/pop_enter.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/drawable_fab_lime.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/drawable/fab_lime.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/drawable_button_gradient.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/drawable/button_gradient.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/drawable_ic_money.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/drawable/ic_money.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/drawable_ic_category.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/drawable/ic_category.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/layout_item_dropdown.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/layout/item_dropdown.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/drawable_ic_money.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/drawable/ic_money.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/drawable_ic_lock.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/drawable/ic_lock.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/layout_fragment_create_group.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/layout/fragment_create_group.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/xml_backup_rules.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/xml/backup_rules.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/drawable_ic_settings.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/drawable/ic_settings.xml"
-    },
-    {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/drawable_fab_lime.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/drawable/fab_lime.xml"
-    },
-    {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/drawable_button_lime.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/drawable/button_lime.xml"
-    },
-    {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/anim_slide_out_left.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/anim/slide_out_left.xml"
-    },
-    {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/drawable_ic_arrow_back.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/drawable/ic_arrow_back.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/drawable_icon_background.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/drawable/icon_background.xml"
     },
     {
         "merged": "com.example.smartsplitter.app-debug-35:/layout_fragment_settings.xml.flat",
         "source": "com.example.smartsplitter.app-main-37:/layout/fragment_settings.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/drawable_ic_other.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/drawable/ic_other.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/layout_fragment_group_list.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/layout/fragment_group_list.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/drawable_ic_group.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/drawable/ic_group.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/anim_slide_up_enter.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/anim/slide_up_enter.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/layout_item_group_card.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/layout/item_group_card.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/drawable_ic_money_dark.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/drawable/ic_money_dark.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/anim_slide_out_right.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/anim/slide_out_right.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/drawable_ic_category.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/drawable/ic_category.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/drawable_ic_home.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/drawable/ic_home.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/drawable_button_lime.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/drawable/button_lime.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/layout_fragment_stats.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/layout/fragment_stats.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/drawable_ic_star.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/drawable/ic_star.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/layout_activity_main.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/layout/activity_main.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/layout_fragment_signup.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/layout/fragment_signup.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/drawable_ic_food.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/drawable/ic_food.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/anim_slide_out_right.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/anim/slide_out_right.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/anim_pop_exit.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/anim/pop_exit.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/layout_bottom_sheet_profile_edit.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/layout/bottom_sheet_profile_edit.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/drawable_ic_document.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/drawable/ic_document.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/drawable_ic_camera.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/drawable/ic_camera.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/layout_fragment_categories.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/layout/fragment_categories.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/drawable_card_gradient.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/drawable/card_gradient.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/drawable_app_logo.png.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/drawable/app_logo.png"
+        "merged": "com.example.smartsplitter.app-debug-35:/layout_fragment_categories.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/layout/fragment_categories.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/drawable_ic_entertainment.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/drawable/ic_entertainment.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/drawable_app_logo.png.flat",
+        "source": "com.example.smartsplitter.app-main-37:/drawable/app_logo.png"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/layout_item_dropdown.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/layout/item_dropdown.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/anim_slide_in_left.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/anim/slide_in_left.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/layout_activity_auth.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/layout/activity_auth.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/layout_fragment_stats.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/layout/fragment_stats.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/layout_fragment_all_groups.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/layout/fragment_all_groups.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/layout_activity_main.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/layout/activity_main.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/layout_fragment_group_detail.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/layout/fragment_group_detail.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/layout_item_group_card.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/layout/item_group_card.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/layout_fragment_expense_list.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/layout/fragment_expense_list.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/xml/data_extraction_rules.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/anim_slide_in_left.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/anim/slide_in_left.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/drawable_ic_app_logo.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/drawable/ic_app_logo.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/drawable_input_background_dark.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/drawable/input_background_dark.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/drawable_ic_other.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/drawable/ic_other.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/layout_fragment_signup.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/layout/fragment_signup.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/drawable_ic_group.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/drawable/ic_group.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/layout_item_expense_card.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/layout/item_expense_card.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/drawable_ic_group_dark.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/drawable/ic_group_dark.xml"
     },
     {
-        "merged": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-debug-35:/layout_dialog_settle_payment.xml.flat",
-        "source": "/Users/jenilrevaliya/.gradle/daemon/9.0-milestone-1/com.example.smartsplitter.app-main-37:/layout/dialog_settle_payment.xml"
+        "merged": "com.example.smartsplitter.app-debug-35:/layout_fragment_login.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/layout/fragment_login.xml"
+    },
+    {
+        "merged": "com.example.smartsplitter.app-debug-35:/layout_fragment_join_group.xml.flat",
+        "source": "com.example.smartsplitter.app-main-37:/layout/fragment_join_group.xml"
     }
 ]

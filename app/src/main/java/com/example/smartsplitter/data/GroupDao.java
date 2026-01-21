@@ -29,6 +29,10 @@ public interface GroupDao {
     LiveData<List<Group>> getAllActiveGroups();
 
     @Transaction
+    @Query("SELECT * FROM groups WHERE is_archived = 0 ORDER BY updated_at DESC")
+    LiveData<List<GroupWithMembers>> getAllActiveGroupsWithMembers();
+
+    @Transaction
     @Query("SELECT * FROM groups WHERE group_id = :groupId")
     LiveData<GroupWithMembers> getGroupWithMembers(String groupId);
 

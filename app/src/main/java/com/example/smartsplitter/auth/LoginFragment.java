@@ -67,7 +67,7 @@ public class LoginFragment extends Fragment {
         authRepository.login(email, password).observe(getViewLifecycleOwner(), user -> {
             btnLogin.setEnabled(true);
             if (user != null) {
-                sessionManager.createLoginSession(user.email, user.name);
+                sessionManager.createLoginSession(user.email, user.name, user.username);
                 Intent intent = new Intent(getActivity(), MainActivity.class);
                 startActivity(intent);
                 requireActivity().finish();

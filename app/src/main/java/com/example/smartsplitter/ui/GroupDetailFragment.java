@@ -58,7 +58,7 @@ public class GroupDetailFragment extends Fragment {
         // Back navigation on group name click (optional)
         tvGroupName.setOnClickListener(v -> getParentFragmentManager().popBackStack());
 
-        viewModel = new ViewModelProvider(this).get(GroupDetailViewModel.class);
+        viewModel = new ViewModelProvider(requireActivity()).get(GroupDetailViewModel.class);
         viewModel.setGroupId(groupId);
 
         viewModel.groupWithMembers.observe(getViewLifecycleOwner(), groupWithMembers -> {

@@ -33,7 +33,7 @@ public class JoinGroupFragment extends Fragment {
 
     private final ActivityResultLauncher<ScanOptions> barcodeLauncher = registerForActivityResult(new ScanContract(),
             result -> {
-                if(result.getContents() == null) {
+                if (result.getContents() == null) {
                     Toast.makeText(getContext(), "Cancelled", Toast.LENGTH_LONG).show();
                 } else {
                     processQrContent(result.getContents());
@@ -42,7 +42,7 @@ public class JoinGroupFragment extends Fragment {
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
-                             @Nullable Bundle savedInstanceState) {
+            @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_join_group, container, false);
     }
 
@@ -61,7 +61,7 @@ public class JoinGroupFragment extends Fragment {
             ScanOptions options = new ScanOptions();
             options.setDesiredBarcodeFormats(ScanOptions.QR_CODE);
             options.setPrompt("Scan a group QR code");
-            options.setCameraId(0); 
+            options.setCameraId(0);
             options.setBeepEnabled(false);
             options.setBarcodeImageEnabled(true);
             barcodeLauncher.launch(options);
@@ -77,10 +77,12 @@ public class JoinGroupFragment extends Fragment {
                 }
 
                 Group group = new Group(scannedData.name, scannedData.curr, "");
-                group.groupId = scannedData.gid; 
+                group.groupId = scannedData.gid;
                 group.createdAt = createdAt;
-                
-                viewModel.joinGroup(group, editName.getText().toString());
+
+                com.example.smartsplitter.utils.SessionManager sessionManager = new com.example.smartsplitter.utils.SessionManager(
+                        requireContext());
+                viewModel.joinGroup(group, editName.getText().toString(), sessionManager.getUsername());
                 getParentFragmentManager().popBackStack();
             } else {
                 Toast.makeText(getContext(), "Please scan a code and enter your name", Toast.LENGTH_SHORT).show();

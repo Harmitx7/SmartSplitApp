@@ -38,11 +38,7 @@ public class MembersFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        if (getParentFragment() != null) {
-            viewModel = new ViewModelProvider(getParentFragment()).get(GroupDetailViewModel.class);
-        } else {
-            viewModel = new ViewModelProvider(requireActivity()).get(GroupDetailViewModel.class);
-        }
+        viewModel = new ViewModelProvider(requireActivity()).get(GroupDetailViewModel.class);
 
         listView = view.findViewById(R.id.list_members);
         adapter = new MemberAdapter(getContext(), new ArrayList<>());
@@ -175,8 +171,11 @@ public class MembersFragment extends Fragment {
     }
 
     private static class MemberAdapter extends ArrayAdapter<Member> {
+        private final com.example.smartsplitter.utils.SessionManager sessionManager;
+
         public MemberAdapter(Context context, List<Member> members) {
             super(context, 0, members);
+            sessionManager = new com.example.smartsplitter.utils.SessionManager(context);
         }
 
         @NonNull
@@ -188,7 +187,24 @@ public class MembersFragment extends Fragment {
             }
             Member member = getItem(position);
             TextView text = convertView.findViewById(android.R.id.text1);
-            text.setText("👤 " + member.displayName);
+
+            String displayName = member.displayName;
+            String currentName = sessionManager.getUserName();
+            String currentUsername = sessionManager.getUsername();
+
+            boolean isMe = false;
+            if (currentUsername != null && !currentUsername.isEmpty() && member.username != null
+                    && !member.username.isEmpty()) {
+                isMe = currentUsername.equalsIgnoreCase(member.username);
+            } else if (currentName != null) {
+                isMe = currentName.equalsIgnoreCase(member.displayName);
+            }
+
+            if (isMe) {
+                displayName += " (Me)";
+            }
+
+            text.setText("👤 " + displayName);
             return convertView;
         }
     }

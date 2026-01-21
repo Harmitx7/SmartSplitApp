@@ -46,7 +46,7 @@ public class GroupListFragment extends Fragment {
         recyclerView.setAdapter(adapter);
 
         viewModel = new ViewModelProvider(this).get(GroupViewModel.class);
-        viewModel.getAllGroups().observe(getViewLifecycleOwner(), groups -> {
+        viewModel.getAllGroupsWithMembers().observe(getViewLifecycleOwner(), groups -> {
             adapter.setGroups(groups);
 
             // Update count
@@ -63,7 +63,12 @@ public class GroupListFragment extends Fragment {
                 recyclerView.setVisibility(View.VISIBLE);
 
                 // Calculate Total Balance logic
-                calculateTotalBalance(groups, tvTotalBalance);
+                // For balance calc, we need to extract Groups
+                java.util.List<com.example.smartsplitter.data.Group> justGroups = new java.util.ArrayList<>();
+                for (com.example.smartsplitter.data.GroupWithMembers gwm : groups) {
+                    justGroups.add(gwm.group);
+                }
+                calculateTotalBalance(justGroups, tvTotalBalance);
             }
         });
 

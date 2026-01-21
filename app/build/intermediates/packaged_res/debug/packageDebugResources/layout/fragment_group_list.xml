@@ -49,7 +49,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/spacing_sm"
-                        android:text="Smart Splitter"
+                        android:text="@string/app_name"
                         android:textColor="@color/text_on_dark"
                         android:textSize="@dimen/text_title"
                         android:textStyle="bold" />

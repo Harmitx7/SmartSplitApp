@@ -21,9 +21,16 @@ import java.util.Locale;
 public class ExpenseListAdapter extends RecyclerView.Adapter<ExpenseListAdapter.ExpenseViewHolder> {
 
     private List<ExpenseWithSplits> expenses = new ArrayList<>();
+    private java.util.Map<String, String> memberNames = new java.util.HashMap<>();
 
     public void setExpenses(List<ExpenseWithSplits> expenses) {
         this.expenses = expenses;
+        notifyDataSetChanged();
+    }
+
+    public void setExpenses(List<ExpenseWithSplits> expenses, java.util.Map<String, String> memberNames) {
+        this.expenses = expenses;
+        this.memberNames = memberNames;
         notifyDataSetChanged();
     }
 
@@ -38,20 +45,43 @@ public class ExpenseListAdapter extends RecyclerView.Adapter<ExpenseListAdapter.
     @Override
     public void onBindViewHolder(@NonNull ExpenseViewHolder holder, int position) {
         ExpenseWithSplits item = expenses.get(position);
-        
+
         holder.textDesc.setText(item.expense.description);
-        holder.textAmount.setText(String.format(Locale.getDefault(), "-%.2f %s", item.expense.totalAmount, item.expense.currency));
-        holder.textPayer.setText("Paid by Member");
-        holder.textDate.setText(DateFormat.getDateInstance(DateFormat.SHORT).format(new Date(item.expense.expenseDate)));
-        
+
+        String amountText = String.format(Locale.getDefault(), "%.2f %s", item.expense.totalAmount,
+                item.expense.currency);
+        if (item.expense.isSettlement) {
+            holder.textAmount.setText(amountText);
+            holder.textAmount.setTextColor(holder.itemView.getContext().getResources().getColor(R.color.accent_cyan));
+        } else {
+            holder.textAmount.setText(amountText);
+            holder.textAmount.setTextColor(holder.itemView.getContext().getResources().getColor(R.color.text_on_dark));
+        }
+
+        String payerName = memberNames.get(item.expense.payerMemberId);
+        if (payerName == null)
+            payerName = "Member";
+        holder.textPayer.setText("Paid by " + payerName);
+
+        holder.textDate
+                .setText(DateFormat.getDateInstance(DateFormat.SHORT).format(new Date(item.expense.expenseDate)));
+
         // Category Icon Mapping - using drawable resources instead of emojis
         int iconResId = R.drawable.ic_other;
         if (item.expense.category != null) {
             switch (item.expense.category.toLowerCase()) {
-                case "food": iconResId = R.drawable.ic_food; break;
-                case "transport": iconResId = R.drawable.ic_transport; break;
-                case "accommodation": iconResId = R.drawable.ic_hotel; break;
-                case "entertainment": iconResId = R.drawable.ic_entertainment; break;
+                case "food":
+                    iconResId = R.drawable.ic_food;
+                    break;
+                case "transport":
+                    iconResId = R.drawable.ic_transport;
+                    break;
+                case "accommodation":
+                    iconResId = R.drawable.ic_hotel;
+                    break;
+                case "entertainment":
+                    iconResId = R.drawable.ic_entertainment;
+                    break;
             }
         }
         holder.imageCategory.setImageResource(iconResId);

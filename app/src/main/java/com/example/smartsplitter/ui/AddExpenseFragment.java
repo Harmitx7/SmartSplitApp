@@ -27,6 +27,8 @@ import java.util.List;
 
 public class AddExpenseFragment extends Fragment {
 
+    private static final String ARG_GROUP_ID = "group_id";
+    private String groupId;
     private GroupDetailViewModel viewModel;
     private EditText editDesc, editAmount;
     private Spinner spinnerCategory, spinnerPayer;
@@ -34,6 +36,22 @@ public class AddExpenseFragment extends Fragment {
     private TextView tvEmojiIcon;
     private SessionManager sessionManager;
     private String selectedEmoji = "☺";
+
+    public static AddExpenseFragment newInstance(String groupId) {
+        AddExpenseFragment fragment = new AddExpenseFragment();
+        Bundle args = new Bundle();
+        args.putString(ARG_GROUP_ID, groupId);
+        fragment.setArguments(args);
+        return fragment;
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        if (getArguments() != null) {
+            groupId = getArguments().getString(ARG_GROUP_ID);
+        }
+    }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
@@ -46,6 +64,9 @@ public class AddExpenseFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         viewModel = new ViewModelProvider(requireActivity()).get(GroupDetailViewModel.class);
+        if (groupId != null) {
+            viewModel.setGroupId(groupId);
+        }
         sessionManager = new SessionManager(requireContext());
 
         editDesc = view.findViewById(R.id.et_description);
@@ -77,11 +98,21 @@ public class AddExpenseFragment extends Fragment {
 
                 // Get current user info for "(Me)" logic
                 String currentName = sessionManager.getUserName();
+                String currentUsername = sessionManager.getUsername();
 
                 for (int i = 0; i < data.members.size(); i++) {
                     Member m = data.members.get(i);
                     String displayName = m.displayName;
-                    if (currentName != null && currentName.equalsIgnoreCase(displayName)) {
+
+                    boolean isMe = false;
+                    if (currentUsername != null && !currentUsername.isEmpty() && m.username != null
+                            && !m.username.isEmpty()) {
+                        isMe = currentUsername.equalsIgnoreCase(m.username);
+                    } else if (currentName != null) {
+                        isMe = currentName.equalsIgnoreCase(m.displayName);
+                    }
+
+                    if (isMe) {
                         displayName += " (Me)";
                     }
                     names.add(displayName);

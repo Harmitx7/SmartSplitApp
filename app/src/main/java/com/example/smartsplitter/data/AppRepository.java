@@ -89,6 +89,10 @@ public class AppRepository {
         return groupDao.getAllActiveGroups();
     }
 
+    public LiveData<List<GroupWithMembers>> getAllActiveGroupsWithMembers() {
+        return groupDao.getAllActiveGroupsWithMembers();
+    }
+
     public LiveData<GroupWithMembers> getGroupWithMembers(String groupId) {
         return groupDao.getGroupWithMembers(groupId);
     }

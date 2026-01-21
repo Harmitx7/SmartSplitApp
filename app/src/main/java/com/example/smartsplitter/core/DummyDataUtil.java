@@ -35,8 +35,8 @@ public class DummyDataUtil {
                 Executors.newSingleThreadExecutor().execute(() -> {
                         AppDatabase db = AppDatabase.getDatabase(context);
 
-                        // Check if updated data already exists (using v2 ID)
-                        Group existingGroup = db.groupDao().getGroupById("dummy-trip-goa-v2");
+                        // Check if updated data already exists (using v3 ID)
+                        Group existingGroup = db.groupDao().getGroupById("dummy-trip-goa-v3");
                         if (existingGroup != null) {
                                 return;
                         }
@@ -53,9 +53,9 @@ public class DummyDataUtil {
 
                         // 2. Create Groups
                         Group trip = new Group("Trip to Goa", "INR", "Weekend getaway");
-                        trip.groupId = "dummy-trip-goa-v2";
+                        trip.groupId = "dummy-trip-goa-v3";
                         Group flatmates = new Group("Flatmates", "INR", "Monthly expenses");
-                        flatmates.groupId = "dummy-flatmates-v2";
+                        flatmates.groupId = "dummy-flatmates-v3";
 
                         db.groupDao().insertGroup(trip);
                         db.groupDao().insertGroup(flatmates);

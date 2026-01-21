@@ -42,11 +42,7 @@ public class BalancesFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        if (getParentFragment() != null) {
-            viewModel = new ViewModelProvider(getParentFragment()).get(GroupDetailViewModel.class);
-        } else {
-            viewModel = new ViewModelProvider(requireActivity()).get(GroupDetailViewModel.class);
-        }
+        viewModel = new ViewModelProvider(requireActivity()).get(GroupDetailViewModel.class);
 
         RecyclerView recyclerBalances = view.findViewById(R.id.recycler_balances);
         recyclerBalances.setLayoutManager(new LinearLayoutManager(getContext()));
@@ -100,8 +96,16 @@ public class BalancesFragment extends Fragment {
     }
 
     private void showSettleDialog(DebtSimplifier.Settlement settlement) {
-        // Direct settlement per user request (no payment gateway, no dialog)
-        if (settlement.amount > 0) {
+        if (settlement.amount <= 0)
+            return;
+
+        androidx.appcompat.app.AlertDialog.Builder builder = new androidx.appcompat.app.AlertDialog.Builder(
+                requireContext());
+        builder.setTitle("Confirm Payment");
+        builder.setMessage(String.format("Record payment of ₹%.2f from %s to %s?",
+                settlement.amount, settlement.fromMemberName, settlement.toMemberName));
+
+        builder.setPositiveButton("Confirm", (dialog, which) -> {
             DebtSimplifier.Settlement finalSettlement = new DebtSimplifier.Settlement(
                     settlement.fromMemberId, settlement.fromMemberName,
                     settlement.toMemberId, settlement.toMemberName,
@@ -110,7 +114,10 @@ public class BalancesFragment extends Fragment {
             android.widget.Toast.makeText(getContext(),
                     "Payment Recorded: ₹" + String.format("%.2f", settlement.amount), android.widget.Toast.LENGTH_SHORT)
                     .show();
-        }
+        });
+
+        builder.setNegativeButton("Cancel", null);
+        builder.show();
     }
 
     private void calculateAndDisplay(List<ExpenseWithSplits> expenses, GroupWithMembers groupData) {
